@@ -36,7 +36,5 @@ if (shouldWePlay.trim().toLowerCase() === "yes") {
 
  -> Here trim is used to avoid unnecessary spaces.
  -> prompt-sync module to take prompt .
- -> If , else if , else these is the order and if , else if will be executed if the condition is true
-    otherwise content of else will be executed .
 
  */
