@@ -1,25 +1,18 @@
 const prompt = require("prompt-sync")();
 
-let number1;
-let number2;
-
-while(true){
-     number1 = parseFloat(prompt("Enter Number 1: "));
-    if(isNaN(number1)){
-        console.log("Enter a valid number")
-    }else {
-        break;
+function getNumber(numberString) {
+  while (true) {
+    const number = parseFloat(prompt("Enter Number" + numberString + ": "));
+    if (isNaN(number)) {
+      console.log("Enter a valid number");
+    } else {
+      return number;
     }
+  }
 }
 
-while(true){
-     number2 = parseFloat(prompt("Enter Number 2: "));
-    if(isNaN(number2)){
-        console.log("Enter a valid number")
-    }else {
-        break;
-    }
-}
+const number1 = getNumber("One");
+const number2 = getNumber("Two");
 
 const operator = prompt("Enter Sign (+, -, *, /): ");
 
@@ -36,6 +29,10 @@ switch (operator) {
     result = number1 * number2;
     break;
   case "/":
+    if (number2 === 0) {
+      console.log("Zero Divison Error");
+    }
+    valid = false;
     result = number1 / number2;
     break;
 
@@ -45,4 +42,14 @@ switch (operator) {
     break;
 }
 
-if (valid) console.log(number1,operator, number2, "=", result);
+if (valid) console.log(number1, operator, number2, "=", result);
+
+
+/* 
+
+-> Usage of Switch 
+-> Usage of parseFloat 
+-> Usage of   while loop 
+-> Usage of isNaN 
+
+*/
