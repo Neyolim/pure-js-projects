@@ -83,3 +83,12 @@ while (keepGoing) {
       break;
   }
 }
+
+/* 
+
+--> array methods : push, splice
+--> for varient (contact of contacts){}
+--> toLowerCase()
+--> for loop 
+
+*/
