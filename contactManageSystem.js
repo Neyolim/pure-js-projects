@@ -53,7 +53,7 @@ function searchContact() {
   const results = [];
 
   for (let contact of contacts) {
-    if (contact.name.includes(searchString)) results.push(contact);
+    if (contact.name.toLowerCase().includes(searchString)) results.push(contact);
   }
   viewContact(results);
 }
