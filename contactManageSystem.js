@@ -24,7 +24,21 @@ function addContact() {
   console.log("Contact added successfully");
 }
 
-function deleteContact() {}
+function deleteContact() {
+  console.log("Contact IDs");
+  for (let i = 0; i < contacts.length; i++) {
+    const contact = contacts[i];
+    console.log((i + 1).toString() + ":" + contact.name);
+
+    const number = parseInt(prompt("Enter an ID: "));
+    if (isNaN(number) || number > contacts.length) {
+      console.log("Invalid contact ID");
+      return;
+    }
+    contacts.splice(number - 1, 1);
+    console.log("Deleted !");
+  }
+}
 
 function viewContact(contacts) {
   for (let contact of contacts) {
@@ -34,7 +48,15 @@ function viewContact(contacts) {
   }
 }
 
-function searchContact() {}
+function searchContact() {
+  const searchString = prompt("Search:").toLowerCase();
+  const results = [];
+
+  for (let contact of contacts) {
+    if (contact.name.includes(searchString)) results.push(contact);
+  }
+  viewContact(results);
+}
 
 keepGoing = true;
 while (keepGoing) {
