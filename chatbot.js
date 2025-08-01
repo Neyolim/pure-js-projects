@@ -57,3 +57,28 @@ function chat() {
 
 // --------------[ 6. Start the Chat ]--------------
 chat();
+
+
+/*
+ 
+
+Variables: const, let
+
+Data types: strings, arrays, objects
+
+Loops: forEach, nested loops
+
+Conditionals: if, includes() checks
+
+Functions: parameters, return values, function calls
+
+Scope: global vs inside functions
+
+String methods: toLowerCase(), trim(), includes()
+
+Array methods: forEach on arrays of objects
+
+Modular thinking: breaking code into small reusable parts
+
+
+*/
