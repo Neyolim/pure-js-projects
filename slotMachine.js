@@ -1,4 +1,4 @@
-// 1. Despot some money
+// 1. Deposit some money
 // 2. Determine number of lines to bet on
 // 3. Collect a bet amount
 // 4. Spin the slot machine
