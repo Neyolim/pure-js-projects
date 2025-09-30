@@ -1,8 +1,20 @@
-const prompt = require("prompt-sync")();
 
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { default: mod };
+};
+
+Object.defineProperty(exports, "__esModule", { value: true });
+
+const prompt_sync_1 = __importDefault(require("prompt-sync"));
+const prompt = (0, prompt_sync_1.default)();
+
+// Ask for player name
 const name = prompt("What is your name? ");
 console.log("Hello", name + ", welcome to our game!");
 
+// Ask if we should play
 const shouldWePlay = prompt("Do you want to play? ");
 
 if (shouldWePlay.trim().toLowerCase() === "yes") {
@@ -32,9 +44,7 @@ if (shouldWePlay.trim().toLowerCase() === "yes") {
   console.log("Invalid input...");
 }
 
-/* 
-
- -> Here trim is used to avoid unnecessary spaces.
- -> prompt-sync module to take prompt .
-
- */
+/*
+ -> .trim() is used to avoid unnecessary spaces
+ -> prompt-sync module handles user input in Node.js
+*/
